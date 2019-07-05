@@ -73,7 +73,7 @@ app.get('/',urlencodedParser,function(req,res){
           i++;
         }
       });
-      newresponse = newresponse + '<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYvZL9yBnDq79sxZ4RdZu-b9XzQGTUrIs&callback=initMap"></script>';
+      newresponse = newresponse + '<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmBzyX3mNed9u1BDY7Jbv6nENmufhfzH0&callback=initMap"></script>';
       console.log(newresponse);
       res.writeHead(200, { 'Content-Type': 'text/html'});            
       res.end(newresponse);
