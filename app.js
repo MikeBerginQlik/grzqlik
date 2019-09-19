@@ -97,10 +97,12 @@ app.get('/',urlencodedParser,function(req,res){
               item ["city"] = location;
               locationData.push(item);
           });
-        newresponse = newresponse + '<div class="meetup-groups-data" style="display:none;">' + JSON.stringify(locationData) + '</div>';
+		  var stringifiedJSON = JSON.stringify(locationData);
+        newresponse = newresponse + '<div class="meetup-groups-data" style="display:none;">' + stringifiedJSON + '</div>';
       res.writeHead(200, { 'Content-Type': 'text/html'});            
       res.end(newresponse);
       newresponse = '';
+	  locationData = [];
         });
     });
   };
